@@ -34,11 +34,11 @@ def all_questions(tagname, order='asc', sort='activity'):
     url = (
             api_url + 
             '/questions?'
-            'order=order&'
-            'sort=activity&'
+            'order={order}&'
+            'sort={sort}&'
             'tagged={tagname}&'
             'site=stackoverflow'.format(
-                order=order, tagname=tagname, sort=sort,
+                order=order, sort=sort, tagname=tagname,
                 )
             )
     r = requests.get(url)
